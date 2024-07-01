@@ -49,7 +49,35 @@
                             <p> HOY DAVID HA SUCUMBIDO ANTE GUILLEM Y JOAN Y LES DEBE UN PUNTO MAS EN EL EXAMEN 💖 </p>
                         </div>
         </div>    
-    </div>                  
+    </div>       
+    
+    
+    <script type="module">
+        import articles from './jsonFalsificado.js';
+
+        
+        const articlesContainer = document.getElementById('articles-container');
+
+        
+        articles.forEach(article => {
+            
+            const titularElement = document.createElement('p');
+            titularElement.textContent = article.Titular;
+
+            
+            const contenidoElement = document.createElement('p');
+            contenidoElement.textContent = article.Contenido;
+
+            
+            articlesContainer.appendChild(titularElement);
+            articlesContainer.appendChild(contenidoElement);
+
+            
+            const brElement = document.createElement('br');
+            articlesContainer.appendChild(brElement);
+        });
+        
+    </script>
 
 </body>
 </html>
